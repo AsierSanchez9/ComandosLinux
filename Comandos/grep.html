@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title>Comandos de Linux - cut </title>
+        <title>Comandos de Linux - grep</title>
 
         <link rel="stylesheet" href="../styles.css">
     </head>
@@ -41,83 +41,38 @@
 
         <main>
             <div class="commandBox">
-                <p style="font-size: 30px;"><strong>Manual cut</strong></p>
+                <p style="font-size: 30px;"><strong>Manual grep</strong></p>
             
                 <!-- Definicion -->
-                <p style="font-size: 15px;">El comando <span>cut</span> es una herramienta fundamental en Linux para extraer y procesar partes específicas de un archivo de texto o de la salida de otro comando. Su principal función es seleccionar y mostrar columnas o campos específicos de la información, permitiendo así manipular y analizar datos de forma eficiente.</p>
+                <p style="font-size: 15px;">El comando <span>grep</span> sirve para buscar palabras o cadenas de caracteres dentro de uno o varios archivos y muestra las lineas completas donde se encuentra la información buscada. </p>
             
 
                 <br>
 
                 <!-- Sintaxis -->
                 <p class="boxTitle"> <strong>Sintaxis</strong></p>
-                <p><span>cut [opciones]... [archivo]</span></p>
+                <p><span>grep [opciones] "Palabra" [Archivo]</span></p>
                 
                 <br>
 
                <!-- Opciones -->
                 <p class="boxTitle"> <strong>Opciones</strong></p>
                 <ul>
-
-                    <li> <span>-d</span>: Especifica el delimitador que se utilizará para dividir el texto en campos.</li> <br>
-
-                    <li> <span>-f</span>: Se utiliza para seleccionar campos específicos de una línea de texto o archivo, debes especificar uno o más números de campo separados por comas.</li> <br>
-
-                    <li> <span>-c</span>: Sirve para selecionar unos caracteres determinados de cada linea.</li> <br>
+                    <li> <span>-i</span>: Opción</li> <br>
+                    <li> <span>-i</span>: Opción</li> <br>
+                    <li> <span>-i</span>: Opción</li> <br>
                 </ul>
                 
                 <br> 
 
                 <!-- Ejemplos -->
                 <p class="boxTitle"> <strong>Ejemplos</strong></p>
-                <ul style="list-style: circle;">
-
-                <ul style="list-style: circle;">
+                <ol style="list-style: circle;">
                     <li>
-                        <p>Este comando serviria para extraer los primeros 10 caracteres de cada línea.</p>
-                        <p><span>cut -c1-10 viaje.txt</span></p>
+                        <p>Este comando busca las lineas donde salga la palabra Estudiante en el archivo NotasInstituto.txt</p>
+                        <p><span>grep "Estudiante" NotasInstituto.txt</span></p>
                     </li>
-
-                    <li>
-                        <p>Suponiendo que tenemos el texto "Juan|25|Madrid" en datos.txt, este comando separa el texto a partir del delimitador ":"</p>
-                        <p><span>cut -d '|' datos.txt</span></p>
-                    </li>
-
-                    <li>
-                        <p>Este comando serviria para extraer solo los nombres y apellidos de los trabajadores del archivo empleados.txt:</p>
-                        <span class="textBox">
-                            <p>Juan Pérez:Desarrollador:30:Informática</p>
-                            <p>María Rodríguez:Diseñadora:28:Diseño gráfico</p>
-                            <p>Carlos López:Contador:35:Finanzas</p>
-                        </span>
-                        
-                        <p><span>cut -d ":" -f 1 empleados.txt</span></p>
-                    </li>
-
-                    <li>
-                        <p>
-                            Yo tengo el archivo "lista.txt" y su contenido es:<br>
-
-                            <span class="textBox">
-                                12345:Paco<br>
-                                23456:Paula<br>
-                                34567:Mario<br>
-                            </span>
-                            
-                            <br>
-                            Si yo quiero separa los siete primeros caracteres, debo ejecutar el siguiente comando:<br>
-                            <span>cut -c 1-7 lista.txt</span><br><br>
-                            La salida del comando será:<br>
-                            <span class="textBox">
-                                12345:P<br>
-                                23456:P<br>
-                                34567:M<br>
-                            </span>
-                            
-                        </p>
-                    </li>
-                </ul>
-                
+                </ol>
             </div>
             <br> <br> <br> <br> <br> <br> <br> <br> <br>
         </main>
