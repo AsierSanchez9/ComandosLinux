@@ -58,52 +58,110 @@
                <!-- Opciones -->
                 <p class="boxTitle"> <strong>Opciones</strong></p>
                 <ul>
-                    <li> <span>-i</span>: Opción</li> <br>
-                    <li> <span>-i</span>: Opción</li> <br>
-                    <li> <span>-i</span>: Opción</li> <br>
+                    <li> <span>-b</span>: Esta opción ignora los espacios en blanco al principio de la línea.</li> <br>
+                    <li> <span>-n</span>: Compara según el número</li> <br>
+                    <li> <span>-r</span>: Ordena las líneas de salida en orden inverso. Es decir, lo que antes estaba al final, ahora estará al principio, y viceversa.</li> <br>
                 </ul>
                 
                 <br> 
 
                 <!-- Ejemplos -->
                 <p class="boxTitle"> <strong>Ejemplos</strong></p>
-                <p>
-                    <span>sort [fichero]</span><br>
-                    Si yo tengo un archivo como este: <br><br>
-                    <span style="display: block; max-width: 50%; min-width: 250px; background-color: rgb(100, 100, 100);">
-                        x<br>
-                        X<br>
-                        A<br>
-                        a<br>
-                        15<br>
-                        2<br>
-                        24<br>
-                        *<br>
-                        /<br>
-                        +<br>
-                        -<br>
-                    </span>
-                    <br>
-                    si ejecuto el comando <span>sort [fichero]</span>, muestra por pantalla esto: <br><br>
-                    <span style="display: block; max-width: 50%; min-width: 250px; background-color: rgb(100, 100, 100);">
-                        *<br>
-                        +<br>
-                        -<br>
-                        /<br>
-                        15<br>
-                        2<br>
-                        24<br>
-                        a<br>
-                        A<br>
-                        x<br>
-                        X<br>
-                    </span>
-                    <br>
-                    pero el contenido del archivo no cambia, se quedaria como en la primera ejecucion, solo ordena la salida por pantalla y ordena por el primer caracter (los numeros los toma como si fueran textos).<br><br><br>
-                </p>
-                <p><span>sort [opcion] blablabla [fichero]</span></p>
-                <p><span>sort [opcion] blablabla [fichero]</span></p>
-                <p><span>sort [opcion] blablabla [fichero]</span></p>
+                
+                <ol style="list-style: circle;">
+                    <li>
+                        <p>
+                            <span>sort [fichero]</span><br>
+                            Si yo tengo un archivo como este: <br><br>
+                            <span style="display: block; max-width: 50%; min-width: 250px; background-color: rgb(100, 100, 100);">
+                                x<br>
+                                X<br>
+                                A<br>
+                                a<br>
+                                15<br>
+                                2<br>
+                                24<br>
+                                *<br>
+                                /<br>
+                                +<br>
+                                -<br>
+                            </span>
+                            <br>
+                            si ejecuto el comando <span>sort [fichero]</span>, muestra por pantalla esto: <br><br>
+                            <span style="display: block; max-width: 50%; min-width: 250px; background-color: rgb(100, 100, 100);">
+                                *<br>
+                                +<br>
+                                -<br>
+                                /<br>
+                                15<br>
+                                2<br>
+                                24<br>
+                                a<br>
+                                A<br>
+                                x<br>
+                                X<br>
+                            </span>
+                            <br>
+                            pero el contenido del archivo no cambia, se quedaria como en la primera ejecucion, solo ordena la salida por pantalla y ordena por el primer caracter (los numeros los toma como si fueran textos).<br><br><br>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <span>sort -b [fichero]</span><br>
+                            Si yo tengo un archivo como este: <br><br>
+                            <span style="display: block; max-width: 50%; min-width: 250px; background-color: rgb(100, 100, 100);">
+                                MX Linux <br>
+                                &nbsp;Manjaro <br>
+                                &nbsp;&nbsp;Mint <br>
+                                &nbsp;&nbsp;&nbsp;elementary <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Ubuntu <br>
+                            </span>
+                            <br>
+                            si ejecuto el comando <span>sort -b archivo.txt</span>, muestra por pantalla esto: <br><br>
+                            <span style="display: block; max-width: 50%; min-width: 250px; background-color: rgb(100, 100, 100);">
+                                elementary <br>
+                                Manjaro <br>
+                                Mint <br>
+                                MX Linux <br>
+                                Ubuntu <br>
+                            </span>
+                            <br>
+                            el contenido del archivo se ordenara por orden alfabético ignorando los espacios iniciales.<br><br><br>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Teniendo un archivo numeros.txt con numeros aleatorios:
+                        </p>
+                        <span class="textBox">
+                            10 <br>
+                            100 <br>
+                            2 <br>
+                            50 <br>
+                        </span>
+                        <p><span>sort -n numeros.txt</span></p>
+                        <p>
+                            Va a ordenar los numeros de menor a mayor
+                        </p>
+                        <span class="textBox">
+                            2 <br>
+                            10 <br>
+                            50 <br>
+                            100 <br>
+                        </span>
+
+                    </li>
+
+                    <li>
+                        <p><span>sort -r viaje.txt</span></p>
+                        <p>
+                            Ordenar alfabéticamente en orden inverso
+                        </p>
+                    </li>
+                </ol>
+
                 
             </div>
             <br> <br> <br> <br> <br> <br> <br> <br> <br>
